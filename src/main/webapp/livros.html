@@ -1,0 +1,62 @@
+<html>
+    <head>
+        <title>Livros</title>
+        <meta charset="utf-8"/>
+        <link href="style.css" type="text/css" rel="stylesheet">
+        <style>
+            label {
+                width: 200px;
+                display: inline-block;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Livros</h1>
+        <div id="loading" style="display: none;">
+		</div>
+		
+		<div id="conteudo">
+        <input type="button" value="NOVO" onclick="novo()"/>
+        <div id="formulario" style="display: none;">
+            <label>
+                NOME DO LIVRO: <input type="text" id="nome"/>
+            </label><br/>
+            <label>
+               DATA LANCAMENTO: <input type="text" id="dataLancamento"/>
+            </label><br/>
+            <label>
+                GENERO: <input type="text" id="genero"/>
+            </label><br/>
+            <label>
+               PAGINAS: <input type="text" id="paginas"/>
+            </label><br/>
+            <label>
+                AUTOR:<input type="text" id="autor"/>
+            </label><br/>
+            <input type="button" value="SALVAR" onclick="salvar()"/>
+            <input type="button" value="CANCELAR" onclick="cancelar()"/>
+        </div>
+        <div id="lista">
+            <table border="1" width="100%">
+                <thead>
+                    <th>ID</th>
+                    <th>NOME DO LIVRO</th>
+                    <th>DATA LANCAMENTO</th>
+                    <th>GENERO</th>
+                    <th>PAGINAS</th>
+                    <th>AUTOR</th>
+                    <th></th>
+                    <th></th>
+
+                </thead>
+                <tbody id="dados">
+
+                </tbody>
+            </table>
+       	 	</div>
+       	 </div>
+        
+        <script src="crud.js"></script>
+    </body>
+
+</html>
